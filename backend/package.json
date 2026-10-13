@@ -1,0 +1,27 @@
+{
+  "name": "medsecure-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "smoke": "node test/smoke.mjs",
+    "smoke:verify": "node test/smoke.mjs --verify",
+    "test:ml": "node test/ml-parity.mjs && node test/llm.test.mjs && node test/summary-eval.mjs && node test/ask-eval.mjs && node test/ocr-eval.mjs",
+    "reset": "node scripts/reset-database.mjs"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "^1.0.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.0",
+    "eciesjs": "^0.5.0",
+    "ethers": "^6.17.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.10.4",
+    "multer": "^2.4.0",
+    "tesseract.js": "^7.0.0",
+    "unpdf": "^1.8.1"
+  }
+}

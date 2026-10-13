@@ -1,0 +1,16 @@
+{
+  "name": "medsecure-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "node": "hardhat node --network medsecure",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "build": "hardhat compile && node scripts/export-artifact.mjs"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^4.0.0",
+    "hardhat": "^3.18.1"
+  }
+}
