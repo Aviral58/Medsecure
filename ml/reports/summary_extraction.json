@@ -1,0 +1,48 @@
+{
+  "what": "Fact extraction by the report summariser, on synthetic documents with known contents",
+  "clean_documents": {
+    "documents": 450,
+    "summary_produced": 100,
+    "lab_values": {
+      "in_documents": 844,
+      "recall": 100,
+      "precision": 100,
+      "high_low_normal_correct": 100
+    },
+    "medicines": {
+      "in_documents": 645,
+      "recall": 100,
+      "precision": 100
+    }
+  },
+  "noisy_documents": {
+    "documents": 450,
+    "summary_produced": 100,
+    "lab_values": {
+      "in_documents": 844,
+      "recall": 91.6,
+      "precision": 92,
+      "high_low_normal_correct": 100
+    },
+    "medicines": {
+      "in_documents": 654,
+      "recall": 92.5,
+      "precision": 92.9
+    }
+  },
+  "unseen_layouts_only": {
+    "documents": 180,
+    "summary_produced": 100,
+    "lab_values": {
+      "in_documents": 375,
+      "recall": 94.1,
+      "precision": 94.1,
+      "high_low_normal_correct": 100
+    },
+    "medicines": {
+      "in_documents": 334,
+      "recall": 96.7,
+      "precision": 97
+    }
+  }
+}

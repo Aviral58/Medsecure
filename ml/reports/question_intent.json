@@ -1,0 +1,353 @@
+{
+  "model": "TF-IDF of words, word pairs and 2-4 letter word pieces + multinomial logistic regression, 14 intents",
+  "trained_on": "2026-10-11",
+  "training_phrasings": 475,
+  "training_questions": 5700,
+  "features": {
+    "words_and_pairs": 2167,
+    "word_pieces": 3121
+  },
+  "data": "Hand-written question phrasings with automatic variations. No real patient questions.",
+  "grouped_cross_validation": {
+    "folds": 5,
+    "accuracy": 0.7979,
+    "macro_f1": 0.7997
+  },
+  "fixed_held_out_phrasings": {
+    "questions": 828,
+    "accuracy": 0.756,
+    "macro_f1": 0.7623,
+    "first_version_accuracy": 0.6232,
+    "advice_questions_caught_by_model_alone": 0.4286,
+    "per_intent": {
+      "abnormal": {
+        "precision": 0.9672,
+        "recall": 0.8194,
+        "f1-score": 0.8872,
+        "support": 72.0
+      },
+      "advice": {
+        "precision": 0.5714,
+        "recall": 0.4286,
+        "f1-score": 0.4898,
+        "support": 84.0
+      },
+      "conclusion": {
+        "precision": 0.8696,
+        "recall": 0.8333,
+        "f1-score": 0.8511,
+        "support": 48.0
+      },
+      "dates_followup": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8889,
+        "support": 60.0
+      },
+      "diagnosis": {
+        "precision": 0.6102,
+        "recall": 0.75,
+        "f1-score": 0.6729,
+        "support": 48.0
+      },
+      "how_to_take": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6667,
+        "support": 60.0
+      },
+      "medicine_purpose": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 48.0
+      },
+      "medicines": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8889,
+        "support": 60.0
+      },
+      "normal_range": {
+        "precision": 0.7593,
+        "recall": 0.8542,
+        "f1-score": 0.8039,
+        "support": 48.0
+      },
+      "other": {
+        "precision": 0.619,
+        "recall": 0.8667,
+        "f1-score": 0.7222,
+        "support": 60.0
+      },
+      "overview": {
+        "precision": 0.8444,
+        "recall": 0.6333,
+        "f1-score": 0.7238,
+        "support": 60.0
+      },
+      "test_meaning": {
+        "precision": 0.8571,
+        "recall": 0.8,
+        "f1-score": 0.8276,
+        "support": 60.0
+      },
+      "test_value": {
+        "precision": 0.6593,
+        "recall": 0.8333,
+        "f1-score": 0.7362,
+        "support": 72.0
+      },
+      "treatment": {
+        "precision": 0.6792,
+        "recall": 0.75,
+        "f1-score": 0.7129,
+        "support": 48.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "abnormal",
+        "advice",
+        "conclusion",
+        "dates_followup",
+        "diagnosis",
+        "how_to_take",
+        "medicine_purpose",
+        "medicines",
+        "normal_range",
+        "other",
+        "overview",
+        "test_meaning",
+        "test_value",
+        "treatment"
+      ],
+      "rows": [
+        [
+          59,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          36,
+          0,
+          0,
+          12,
+          12,
+          0,
+          0,
+          3,
+          0,
+          0,
+          8,
+          12,
+          1
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          36,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          36,
+          24,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          1,
+          6,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          1,
+          6,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          38,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          48,
+          12,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          60,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          36
+        ]
+      ]
+    }
+  }
+}

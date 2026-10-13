@@ -1,0 +1,24 @@
+{
+  "resolver": {
+    "held_out_questions": 828,
+    "intent_accuracy": 88.5,
+    "decided_by_rule": 82.1,
+    "advice_requests_caught": 98.8,
+    "other_questions_wrongly_refused": 3.4
+  },
+  "worked_examples": {
+    "passed": 24,
+    "total": 24
+  },
+  "spelling": {
+    "misspellings_tried": 369,
+    "corrected": 97.6,
+    "corrected_to_the_wrong_word": 0,
+    "ordinary_words_tried": 65,
+    "ordinary_words_wrongly_changed": 0
+  },
+  "conversations": {
+    "passed": 17,
+    "total": 17
+  }
+}

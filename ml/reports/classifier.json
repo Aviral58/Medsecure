@@ -1,0 +1,285 @@
+{
+  "model": "TF-IDF (1-2 word n-grams, sublinear TF) + multinomial logistic regression",
+  "trained_on": "2026-10-07",
+  "training_documents": 2200,
+  "vocabulary_size": 4000,
+  "confidence_threshold": 0.6,
+  "data": "Synthetic documents from generate_documents.py. No real patient data.",
+  "test_same_layouts": {
+    "documents": 550,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "suggestion_rate": 1.0,
+    "accuracy_when_suggesting": 1.0,
+    "confusion_matrix": {
+      "labels": [
+        "Discharge summary",
+        "Lab report",
+        "Other",
+        "Prescription",
+        "Scan or imaging",
+        "Vaccination record"
+      ],
+      "rows": [
+        [
+          88,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          88,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          110,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          88,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          88,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          88
+        ]
+      ]
+    },
+    "per_class": {
+      "Discharge summary": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 88.0
+      },
+      "Lab report": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 88.0
+      },
+      "Other": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 110.0
+      },
+      "Prescription": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 88.0
+      },
+      "Scan or imaging": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 88.0
+      },
+      "Vaccination record": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 88.0
+      }
+    }
+  },
+  "test_unseen_layouts": {
+    "documents": 900,
+    "accuracy": 0.8922,
+    "macro_f1": 0.8827,
+    "suggestion_rate": 0.6967,
+    "accuracy_when_suggesting": 0.9506,
+    "confusion_matrix": {
+      "labels": [
+        "Discharge summary",
+        "Lab report",
+        "Other",
+        "Prescription",
+        "Scan or imaging",
+        "Vaccination record"
+      ],
+      "rows": [
+        [
+          58,
+          0,
+          0,
+          92,
+          0,
+          0
+        ],
+        [
+          0,
+          150,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          145,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          150,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          150,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          150
+        ]
+      ]
+    },
+    "per_class": {
+      "Discharge summary": {
+        "precision": 1.0,
+        "recall": 0.3867,
+        "f1-score": 0.5577,
+        "support": 150.0
+      },
+      "Lab report": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "Other": {
+        "precision": 1.0,
+        "recall": 0.9667,
+        "f1-score": 0.9831,
+        "support": 150.0
+      },
+      "Prescription": {
+        "precision": 0.6073,
+        "recall": 1.0,
+        "f1-score": 0.7557,
+        "support": 150.0
+      },
+      "Scan or imaging": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "Vaccination record": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      }
+    }
+  },
+  "comparison_on_unseen_layouts": {
+    "Logistic regression (used)": 0.8922,
+    "Multinomial naive Bayes": 0.9611,
+    "Linear SVM": 0.9111
+  },
+  "strongest_terms": {
+    "Discharge summary": [
+      "discharge",
+      "diagnosis",
+      "summary",
+      "discharged",
+      "stay",
+      "in",
+      "under",
+      "in opd"
+    ],
+    "Lab report": [
+      "dl",
+      "mg dl",
+      "reference",
+      "range",
+      "result",
+      "sample",
+      "serum",
+      "ml"
+    ],
+    "Other": [
+      "rs",
+      "the",
+      "to",
+      "bill",
+      "appointment",
+      "charges",
+      "charges rs",
+      "that"
+    ],
+    "Prescription": [
+      "mg",
+      "days",
+      "medicines",
+      "food",
+      "take",
+      "daily",
+      "pm",
+      "rx"
+    ],
+    "Scan or imaging": [
+      "normal",
+      "radiologist",
+      "no",
+      "radiology",
+      "impression",
+      "is",
+      "findings",
+      "imaging"
+    ],
+    "Vaccination record": [
+      "dose",
+      "batch",
+      "dose batch",
+      "vaccine",
+      "immunisation",
+      "vaccination",
+      "booster",
+      "beneficiary"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "what": "Reading pictures of documents (OCR), on synthetic documents rendered as images",
+  "scan": {
+    "pictures": 90,
+    "text_read": 100,
+    "record_type_recognised": 94.4,
+    "seconds_per_picture": 1.47,
+    "lab_values": {
+      "in_documents": 178,
+      "found_with_exact_value": 98.9,
+      "with_decimal_checks": {
+        "right_label": 97.8,
+        "marked_unclear": 1.1,
+        "wrong_label": 0,
+        "not_found": 1.1
+      },
+      "without_decimal_checks": {
+        "right_label": 92.1,
+        "marked_unclear": 0,
+        "wrong_label": 2.2,
+        "not_found": 5.6
+      }
+    },
+    "medicines": {
+      "in_documents": 130,
+      "recall": 99.2,
+      "precision": 100
+    }
+  },
+  "photo": {
+    "pictures": 90,
+    "text_read": 100,
+    "record_type_recognised": 94.4,
+    "seconds_per_picture": 1.43,
+    "lab_values": {
+      "in_documents": 178,
+      "found_with_exact_value": 94.9,
+      "with_decimal_checks": {
+        "right_label": 93.8,
+        "marked_unclear": 4.5,
+        "wrong_label": 0,
+        "not_found": 1.7
+      },
+      "without_decimal_checks": {
+        "right_label": 88.8,
+        "marked_unclear": 0,
+        "wrong_label": 3.9,
+        "not_found": 7.3
+      }
+    },
+    "medicines": {
+      "in_documents": 130,
+      "recall": 94.6,
+      "precision": 100
+    }
+  }
+}

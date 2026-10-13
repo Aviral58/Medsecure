@@ -1,0 +1,70 @@
+{
+  "model": "Isolation Forest (150 trees, 512 samples per tree), trained on normal windows only",
+  "trained_on": "2026-10-07",
+  "features": [
+    "opens",
+    "patients",
+    "emergency_uses",
+    "night",
+    "max_burst",
+    "opens_per_patient"
+  ],
+  "window": "one clock hour per doctor",
+  "data": "Simulated access logs. No real hospital data. See the docstring of train_access_model.py.",
+  "training_windows": 20000,
+  "threshold": 0.67875,
+  "test": {
+    "normal_windows": 10000,
+    "misuse_windows": 1500,
+    "roc_auc": 0.9997,
+    "average_precision": 0.9976,
+    "false_alarm_rate": 0.0046,
+    "detection_rate": 0.9887,
+    "precision": 0.9699,
+    "detection_rate_by_kind": {
+      "bulk browsing of many patients": 1.0,
+      "rapid burst of opens": 1.0,
+      "repeated emergency access": 0.9433,
+      "night-time browsing": 1.0,
+      "one patient opened again and again": 1.0
+    }
+  },
+  "sanity_cases": {
+    "ordinary hour: 3 opens, 2 patients": {
+      "flagged": false,
+      "expected": false
+    },
+    "busy clinic hour: 8 opens, 5 patients": {
+      "flagged": false,
+      "expected": false
+    },
+    "one genuine emergency use": {
+      "flagged": false,
+      "expected": false
+    },
+    "night-shift doctor, 2 opens": {
+      "flagged": false,
+      "expected": false
+    },
+    "40 opens of 30 patients in an hour": {
+      "flagged": true,
+      "expected": true
+    },
+    "25 opens inside five minutes": {
+      "flagged": true,
+      "expected": true
+    },
+    "5 emergency uses in an hour": {
+      "flagged": true,
+      "expected": true
+    },
+    "18 opens of 15 patients at 2 am": {
+      "flagged": true,
+      "expected": true
+    },
+    "30 opens of the same patient": {
+      "flagged": true,
+      "expected": true
+    }
+  }
+}
